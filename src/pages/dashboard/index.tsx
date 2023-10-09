@@ -1,6 +1,9 @@
 const Dashboard = () => {
     return (
-        <h1>Dashboard Page</h1>
+        <div>
+            <h1>Dashboard Page</h1>
+            <p>Página onde se encontra as principais funcionalidades do sistema</p>
+        </div>
     )
 }
 

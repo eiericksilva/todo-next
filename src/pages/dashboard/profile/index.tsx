@@ -1,6 +1,9 @@
 const Profile = () => {
     return (
-        <h1>Profile</h1>
+        <div>
+            <h1>Profile</h1>
+            <p>Página onde o usuário pode ver/editar suas informações pessoais</p>
+        </div>
     )
 }
 
