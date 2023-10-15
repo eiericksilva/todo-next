@@ -1,22 +1,72 @@
-import { Box } from "@mui/material";
+import { Button, Container, Grid, Paper, TextField, Typography } from "@mui/material";
 import Link from 'next/link'
 
 const SignUp = () => {
     return (
-       <div>
-           <h1>SignUp Page</h1>
-           <p>Página para o usuário se cadastrar no sistema</p>
-
-           <hr />
-           
-           <Box display="flex" flexDirection="column" width={300} gap={2}>
-            <h2>Formulário de cadastro</h2>
-            <input type="text" placeholder="name"/>
-            <input type="text" placeholder="password"/>
-            <input type="text" placeholder="confirm password"/>
-            <Link href="/dashboard">Register</Link>
-           </Box>
-       </div>
+        <Container
+        component="main"
+        maxWidth="xs"
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: '100vh',
+        }}
+      >
+        <Paper elevation={3} style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <Typography variant="h5">Sign Up</Typography>
+          <form  style={{ width: '100%', marginTop: '20px' }}>
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="name"
+              label="Name"
+              name="name"
+            />
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              name="password"
+              label="Password"
+              type="password"
+              id="password"
+              autoComplete="new-password"
+            />
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              name="confirmPassword"
+              label="Confirm Password"
+              type="password"
+              id="confirmPassword"
+              autoComplete="new-password"
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              style={{ marginTop: '20px' }}
+            >
+              Sign Up
+            </Button>
+          </form>
+          <Grid container style={{ marginTop: '20px' }}>
+            <Grid item>
+              <Link href="/signIn">
+                Already have an account? Sign In
+              </Link>
+            </Grid>
+          </Grid>
+        </Paper>
+      </Container>
     )
 }
 

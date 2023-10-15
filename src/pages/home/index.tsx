@@ -1,3 +1,4 @@
+
 import Link from 'next/link'
 
 const HomePage = () => {
@@ -8,7 +9,6 @@ const HomePage = () => {
            <hr />
            <div><span>Já é cacadastrado? </span> <Link href="/signIn" >Sign In</Link></div>
            <div><span>Cadastre-se</span> <Link href="/signUp">Sign Up</Link></div>
-          
        </div>
     )
 }
