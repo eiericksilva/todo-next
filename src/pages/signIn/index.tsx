@@ -1,4 +1,14 @@
-import { Button, Container, Grid, Paper, TextField, Typography } from "@mui/material";
+import { 
+    Button, 
+    Container, 
+    Grid, 
+    Paper, 
+    TextField, 
+    Typography, 
+    FormGroup, 
+    FormControlLabel, 
+    Checkbox 
+} from "@mui/material";
 import Link from "next/link";
 
 const SignIn = () => {
@@ -34,6 +44,9 @@ const SignIn = () => {
                     id="password"
                     autoComplete="current-password"
                 />
+                <FormGroup>
+                    <FormControlLabel control={<Checkbox defaultChecked />} label="Remember me" />
+                </FormGroup>
                 <Button
                     type="submit"
                     fullWidth
